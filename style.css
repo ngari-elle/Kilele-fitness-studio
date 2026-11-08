@@ -1,0 +1,204 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    line-height: 1.6;
+    color: #1e1e2f;
+    background: #f9fafc;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: #fff;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+    padding: 0.8rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid #e63946; }
+.logo h1 { font-size: 1.5rem; }
+
+/* ===== TOGGLE BUTTON (hamburger) ===== */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #1e1e2f;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+}
+
+/* ===== NAV (desktop) ===== */
+nav ul { display: flex; list-style: none; gap: 1.8rem; }
+nav a {
+    text-decoration: none;
+    color: #2d2d44;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+nav a:hover, nav a.active { color: #e63946; }
+
+/* ===== MOBILE: dropdown drawer ===== */
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+
+    nav {
+        flex-basis: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+    nav.active { max-height: 400px; }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1.2rem 0;
+        align-items: center;
+        border-top: 1px solid #eee;
+    }
+    nav a {
+        display: block;
+        padding: 0.5rem 1rem;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ===== PAGE CONTENT ===== */
+main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; }
+h2 { font-size: 2.2rem; margin-bottom: 1rem; color: #1e1e2f; }
+h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+p { margin-bottom: 1rem; color: #3a3a5a; }
+
+/* ===== BUTTON ===== */
+.btn {
+    display: inline-block;
+    background: #e63946;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+}
+.btn:hover { background: #c1121f; transform: translateY(-2px); }
+
+/* ===== CARDS ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    text-align: center;
+}
+.card i { font-size: 2.5rem; color: #e63946; margin-bottom: 1rem; }
+.card img { width: 100%; border-radius: 12px; margin-bottom: 1rem; }
+
+/* ===== CONTACT FORM ===== */
+form input, form textarea {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+form textarea { min-height: 120px; }
+
+/* ===== FOOTER ===== */
+footer {
+    background: #1e1e2f;
+    color: #b0b0c0;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+/* ===== SIGNUP FORM ===== */
+.signup-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    margin-top: 2rem;
+}
+.signup-form h3 {
+    margin: 1.5rem 0 1rem;
+    color: #e63946;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 0.4rem;
+}
+.signup-form h3:first-of-type { margin-top: 0; }
+.signup-form label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    color: #1e1e2f;
+}
+.signup-form select {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    background: #fff;
+}
+
+/* ===== TIMETABLE ===== */
+.timetable-wrap {
+    overflow-x: auto;
+    margin-top: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+.timetable {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    min-width: 720px;
+}
+.timetable th,
+.timetable td {
+    padding: 0.75rem 0.6rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    font-size: 0.92rem;
+}
+.timetable thead th {
+    background: #1e1e2f;
+    color: #fff;
+    font-weight: 600;
+}
+.timetable tbody td:first-child {
+    font-weight: 600;
+    color: #e63946;
+    background: #fdf6f7;
+    white-space: nowrap;
+}
+.slot-label td {
+    background: #f0f2f8;
+    text-align: left;
+    font-weight: 600;
+    color: #1e1e2f;
+    padding-left: 1rem;
+}
+.slot-label i {
+    color: #e63946;
+    margin-right: 0.4rem;
+}
