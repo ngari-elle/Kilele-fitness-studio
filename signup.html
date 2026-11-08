@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up — Kilele Fitness Studio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="OIG1 (1).jfif.jpeg" alt="Kilele Fitness Logo">
+            <h1>Kilele Fitness Studio</h1>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="trainers.html">Trainers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signup.html" class="active">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Join Kilele Fitness Studio</h2>
+        <p>Fill in the form below and we'll get you started on the right plan with the right trainer.</p>
+
+        <form action="submit_signup.php" method="POST" class="signup-form">
+
+            <h3>Personal Details</h3>
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="14" max="100" required>
+
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="">-- Select --</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="other">Other</option>
+                <option value="prefer-not">Prefer not to say</option>
+            </select>
+
+            <h3>Choose Your Plan</h3>
+
+            <label for="service">Service You Want</label>
+            <select id="service" name="service" required>
+                <option value="">-- Select a Service --</option>
+                <option value="personal-training">Personal Training</option>
+                <option value="group-classes">Group Classes</option>
+                <option value="nutrition-guidance">Nutrition Guidance</option>
+                <option value="all">All of the above</option>
+            </select>
+
+            <label for="membership">Membership Plan</label>
+            <select id="membership" name="membership" required>
+                <option value="">-- Select a Plan --</option>
+                <option value="basic">Basic — $29/month</option>
+                <option value="premium">Premium — $49/month</option>
+                <option value="elite">Elite — $79/month</option>
+            </select>
+
+            <label for="trainer">Preferred Trainer</label>
+            <select id="trainer" name="trainer" required>
+                <option value="">-- Select a Trainer --</option>
+                <option value="john">John Doe — Strength & Conditioning</option>
+                <option value="jane">Jane Smith — Yoga & Pilates</option>
+                <option value="mike">Mike Johnson — Nutrition & Wellness</option>
+                <option value="any">No preference</option>
+            </select>
+
+            <h3>Schedule Preference</h3>
+
+            <label for="day">Preferred Day</label>
+            <select id="day" name="day" required>
+                <option value="">-- Select a Day --</option>
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+                <option value="wednesday">Wednesday</option>
+                <option value="thursday">Thursday</option>
+                <option value="friday">Friday</option>
+                <option value="saturday">Saturday</option>
+                <option value="sunday">Sunday</option>
+            </select>
+
+            <label for="time">Preferred Time</label>
+            <select id="time" name="time" required>
+                <option value="">-- Select a Time --</option>
+                <option value="morning">Morning (6:00 – 10:00)</option>
+                <option value="afternoon">Afternoon (12:00 – 16:00)</option>
+                <option value="evening">Evening (17:00 – 21:00)</option>
+            </select>
+
+            <label for="notes">Anything else we should know? (optional)</label>
+            <textarea id="notes" name="notes" placeholder="Injuries, goals, questions..."></textarea>
+
+            <button type="submit" class="btn">Submit Sign Up</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Kilele Fitness Studio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

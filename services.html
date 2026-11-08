@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services — Kilele Fitness Studio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="OIG1 (1).jfif.jpeg" alt="Kilele Fitness Logo">
+            <h1>Kilele Fitness Studio</h1>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="trainers.html">Trainers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Our Services</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-dumbbell"></i>
+                <h3>Personal Training</h3>
+                <p>One-on-one sessions with certified trainers to reach your goals faster.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-running"></i>
+                <h3>Group Classes</h3>
+                <p>Yoga, pilates, and HIIT classes for every fitness level.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-heartbeat"></i>
+                <h3>Nutrition Guidance</h3>
+                <p>Personalized nutrition plans to complement your workouts.</p>
+            </div>
+        </div>
+
+        <!-- ============ TIMETABLE ============ -->
+        <h2 style="margin-top:4rem;">Weekly Class Timetable</h2>
+        <p>Morning, afternoon, and evening classes run all week. Pick a slot and bring your energy.</p>
+
+        <div class="timetable-wrap">
+            <table class="timetable">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                        <th>Sun</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- MORNING -->
+                    <tr class="slot-label"><td colspan="8"><i class="fas fa-sun"></i> Morning (6:00 – 10:00)</td></tr>
+                    <tr>
+                        <td>6:30 – 7:30</td>
+                        <td>HIIT</td>
+                        <td>Yoga</td>
+                        <td>HIIT</td>
+                        <td>Yoga</td>
+                        <td>HIIT</td>
+                        <td>Pilates</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>8:00 – 9:00</td>
+                        <td>Pilates</td>
+                        <td>Strength</td>
+                        <td>Pilates</td>
+                        <td>Strength</td>
+                        <td>Pilates</td>
+                        <td>Yoga</td>
+                        <td>—</td>
+                    </tr>
+
+                    <!-- AFTERNOON -->
+                    <tr class="slot-label"><td colspan="8"><i class="fas fa-cloud-sun"></i> Afternoon (12:00 – 16:00)</td></tr>
+                    <tr>
+                        <td>12:30 – 13:30</td>
+                        <td>Strength</td>
+                        <td>Pilates</td>
+                        <td>Strength</td>
+                        <td>Pilates</td>
+                        <td>Strength</td>
+                        <td>—</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>15:00 – 16:00</td>
+                        <td>Nutrition Talk</td>
+                        <td>Yoga</td>
+                        <td>Nutrition Talk</td>
+                        <td>Yoga</td>
+                        <td>Mobility</td>
+                        <td>—</td>
+                        <td>—</td>
+                    </tr>
+
+                    <!-- EVENING -->
+                    <tr class="slot-label"><td colspan="8"><i class="fas fa-moon"></i> Evening (17:00 – 21:00)</td></tr>
+                    <tr>
+                        <td>17:30 – 18:30</td>
+                        <td>HIIT</td>
+                        <td>Strength</td>
+                        <td>HIIT</td>
+                        <td>Strength</td>
+                        <td>HIIT</td>
+                        <td>—</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>19:00 – 20:00</td>
+                        <td>Yoga</td>
+                        <td>Pilates</td>
+                        <td>Yoga</td>
+                        <td>Pilates</td>
+                        <td>Meditation</td>
+                        <td>—</td>
+                        <td>—</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p style="margin-top:2rem;">
+            Want to lock in a slot? <a href="signup.html" class="btn">Sign Up Now</a>
+        </p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Kilele Fitness Studio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
